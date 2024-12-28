@@ -1,0 +1,80 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:grey;
+}
+.container{
+    margin: 0 auto;
+    max-width: 900px;
+}
+.applybox{
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: 5px 4px 5px rgba(2, 2,1, 0.1);
+    border-radius: 20px;
+}
+.title{
+    font-size:20px;
+}
+.form_container {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+.form_control
+{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+input,select,textarea{
+    padding: 6px 10px;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+input:focus{
+    outline-color: red;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+button {
+    background-color: red;
+    color: white;
+    padding: 10px 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: 0.3s ease-in;
+}
+button:hover{
+    background-color: grey;
+    border: 2px solid red;
+    color:black;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+
+}
+.address_control
+{
+    grid-column: 1 / span 2;
+}
+.address_control textarea{
+    width: 100%;
+}
+@media (max-width:460px){ .address_control
+    {
+        grid-column: 1 / span 1;
+    }
+
+};
